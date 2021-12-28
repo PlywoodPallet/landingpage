@@ -1,0 +1,45 @@
+body {
+    display:flex;
+    flex-direction: column;
+    padding:0;
+    margin:0;
+}
+
+/* a column flex item and row flex container*/
+.header-panel{
+    background:grey;
+    display:flex;
+    justify-content:center;
+}
+
+/* a row flex container */
+.header-test{
+    display:flex;
+    justify-content:center;
+}
+
+/* top row of header which includes logo and menu */
+.header-top{
+    display:flex;
+    justify-content: space-between;
+    min-width: 800px; /* i need to understand what this is doing. Need something that collapses more gracefully than fixed padding or margin */
+}
+
+.header-top ul{
+    list-style-type:none;
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu {
+    display:flex;
+    gap: 20px;
+}
+
+
+
+
