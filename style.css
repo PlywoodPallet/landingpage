@@ -10,26 +10,40 @@ body {
     background:grey;
     display:flex;
     justify-content:center;
+    flex-direction:row;
 }
 
-/* a row flex container */
-.header-test{
+.header-margin{
+    flex-grow: 1;
+    flex-shrink: 3;   
+}
+
+.header-container {
     display:flex;
-    justify-content:center;
+    flex-direction: column;
+    flex-grow: 3;
+    flex-shrink: 1;
 }
 
 /* top row of header which includes logo and menu */
 .header-top{
     display:flex;
     justify-content: space-between;
-    min-width: 800px; /* i need to understand what this is doing. Need something that collapses more gracefully than fixed padding or margin */
+    /*min-width: 800px; /* i need to understand what this is doing. Does this collapse more gracefully than fixed padding or margin? */
 }
 
-.header-top ul{
+.header-content {
+    display:flex;
+    justify-content:space-around;
+    gap: 0px;
+}
+
+ul.menu{
     list-style-type:none;
     margin: 0px;
     padding: 0px;
 }
+
 
 a {
     text-decoration: none;
@@ -42,4 +56,52 @@ a {
 
 
 
+/* is there a more elegant way than flex-direction:column? Even though it is redudant (body flex-direction is already column), I like the way this organizes the site in modular sections*/
+.infographic-panel {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+
+}
+
+.infographic-title {
+
+}
+
+.infographic-container{
+    display: flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+}
+
+.infographic.item {
+
+}
+
+.quote-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    background: lightgreen;
+    padding: 50px 0px;
+}
+
+.quote-text {
+
+}
+
+.quote-author {
+    
+}
+
+
+.footer{
+    height: 72px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    background:lightblue;
+}
 
