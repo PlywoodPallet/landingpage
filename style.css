@@ -7,7 +7,7 @@ body {
 
 /* a column flex item and row flex container*/
 .header-panel{
-    background:grey;
+    background:#1F2937;
     display:flex;
     justify-content:center;
     flex-direction:row;
@@ -29,13 +29,15 @@ body {
 .header-top{
     display:flex;
     justify-content: space-between;
+    align-items:center;
     /*min-width: 800px; /* i need to understand what this is doing. Does this collapse more gracefully than fixed padding or margin? */
 }
 
-.header-content {
-    display:flex;
-    justify-content:space-around;
-    gap: 0px;
+.header-logo {
+    color:#F9FAF8;
+    font-size: 24px;
+    font-weight:bold;
+
 }
 
 ul.menu{
@@ -45,8 +47,10 @@ ul.menu{
 }
 
 
-a {
+.menu li a {
     text-decoration: none;
+    font-size: 18px;
+    color: #E5E7EB;
 }
 
 .menu {
@@ -54,6 +58,21 @@ a {
     gap: 20px;
 }
 
+.header-content {
+    display:flex;
+    justify-content:space-between;
+}
+
+.hero-main-text {
+    color: #F9FAF8;
+    font-size: 48px;
+    font-weight:bolder;
+}
+
+.hero-secondary-text {
+    color: #F9FAF8;
+    /* font-size: 18px; */
+}
 
 
 /* is there a more elegant way than flex-direction:column? Even though it is redudant (body flex-direction is already column), I like the way this organizes the site in modular sections*/
@@ -66,7 +85,9 @@ a {
 }
 
 .infographic-title {
-
+    color: #1F2937;
+    font-size: 36px;
+    font-weight:bolder;
 }
 
 .infographic-container{
@@ -82,18 +103,24 @@ a {
 .quote-panel {
     display: flex;
     flex-direction: column;
-    justify-content:center;
-    align-items:center;
-    background: lightgreen;
-    padding: 50px 0px;
+    background: #E5E7EB;
+    padding: 50px 50px;
 }
 
 .quote-text {
+    color:#1F2937;
+    font-size:26px;
+    font-style: italic;
+    text-align: justify;
+    justify-content:center;
+    align-items:center;
 
 }
 
 .quote-author {
-    
+    justify-content:flex-end;
+    align-items:center;
+
 }
 
 
@@ -102,6 +129,8 @@ a {
     display:flex;
     justify-content: center;
     align-items:center;
-    background:lightblue;
+    background:#1F2937;
+    color:#F9FAF8;
+    font-size:12px;
 }
 
