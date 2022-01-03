@@ -1,3 +1,7 @@
+/* Experimenting with vh and vw for unit size but not consistently across all selectors. */
+
+
+
 body {
     display:flex;
     flex-direction: column;
@@ -5,32 +9,27 @@ body {
     margin:0;
 }
 
-/* a column flex item and row flex container*/
+a {
+    text-decoration: none;
+    color: #E5E7EB;
+}
+
+
 .header-panel{
     background:#1F2937;
     display:flex;
     justify-content:center;
-    flex-direction:row;
-}
-
-.header-margin{
-    flex-grow: 1;
-    flex-shrink: 3;   
-}
-
-.header-container {
-    display:flex;
-    flex-direction: column;
-    flex-grow: 3;
-    flex-shrink: 1;
+    flex-direction:column;
+    padding: 0 15vw;
 }
 
 /* top row of header which includes logo and menu */
+/* a column flex item and row flex container*/
 .header-top{
     display:flex;
     justify-content: space-between;
     align-items:center;
-    /*min-width: 800px; /* i need to understand what this is doing. Does this collapse more gracefully than fixed padding or margin? */
+    padding: 5vh 0;
 }
 
 .header-logo {
@@ -48,9 +47,7 @@ ul.menu{
 
 
 .menu li a {
-    text-decoration: none;
     font-size: 18px;
-    color: #E5E7EB;
 }
 
 .menu {
@@ -61,6 +58,13 @@ ul.menu{
 .header-content {
     display:flex;
     justify-content:space-between;
+    align-items:center;
+    padding: 10vh 0;
+    gap: 100px;
+}
+
+.header-text {
+
 }
 
 .hero-main-text {
@@ -71,7 +75,8 @@ ul.menu{
 
 .hero-secondary-text {
     color: #F9FAF8;
-    /* font-size: 18px; */
+    font-size: 18px;
+    flex-wrap:wrap;
 }
 
 
@@ -81,7 +86,8 @@ ul.menu{
     justify-content: center;
     align-items: center;
     flex-direction:column;
-
+    padding: 5vh 15vw;
+    gap: 5vh;
 }
 
 .infographic-title {
@@ -94,9 +100,19 @@ ul.menu{
     display: flex;
     justify-content:space-around;
     flex-wrap:wrap;
+    gap: 20px;
 }
 
 .infographic.item {
+    padding: 0px 0px;
+
+}
+
+.infographic-image{
+    width:150px;
+    height:150px;
+    border: 2px solid #3882f6;
+    border-radius: 25px;
 
 }
 
@@ -104,7 +120,8 @@ ul.menu{
     display: flex;
     flex-direction: column;
     background: #E5E7EB;
-    padding: 50px 50px;
+    padding: 10vh 20vw;
+    gap: 2vh;
 }
 
 .quote-text {
@@ -118,19 +135,50 @@ ul.menu{
 }
 
 .quote-author {
-    justify-content:flex-end;
-    align-items:center;
+    text-align:end;
+
 
 }
 
+.calltoaction-panel {
+    background: #3882f6;
+    color: #F9FAF8;
+    padding: 50px 200px;
+    margin: 50px 200px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    border: 2px solid #F9FAF8;
+    border-radius: 25px;
+}
+
+.calltoaction-text{
+    display:flex;
+    flex-direction: column;
+}
+
+.calltoaction-header {
+
+}
+
+.calltoaction-body{
+
+}
+
+.footer a {
+    font-size: 12px;
+}
 
 .footer{
     height: 72px;
     display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items:center;
     background:#1F2937;
     color:#F9FAF8;
     font-size:12px;
+    gap:5px;
 }
 

@@ -10,14 +10,7 @@
 
 <!-- Each "panel" is a flex item made to be interchangable and modular -->
 
-
-<!-- header-panel is responsive, but I don't know if this is the elegant way to do it. Other parts of the site are non-responsive and use fixed padding -->
 <div class="header-panel">
-
-    <div class="header-margin"></div>
-
-    <!-- Need a better name for this, not consistent in hierachy with infographic-container. The purpose of this container is to add flex padding on left and right-->
-    <div class="header-container"> 
         <div class="header-top">
             <div class="header-logo">Header Logo</div>
 
@@ -30,24 +23,22 @@
 
         <!-- Should I display this like the MDN example of image/caption? -->
         <div class="header-content">
-            <div class="content">
+            <div class="header-text">
                 <div class="hero-main-text">This Website is Awesome</div>
-                <!-- uncommenting this somehow breaks my responsive design for the header panel. 
-                    
-                    <div class="hero-secondary-text">Etiam aliquet, metus consequat tristique commodo, augue justo efficitur elit, sed cursus dui diam volutpat ipsum. Vivamus facilisis congue fringilla. Mauris pharetra tortor eu tellus tincidunt dapibus. Quisque iaculis cursus convallis. 
-                </div> -->
 
+                <div class="hero-secondary-text">Etiam aliquet, metus consequat tristique commodo, augue justo efficitur elit, sed cursus dui diam volutpat ipsum.
+                </div>
 
+                <button type="button">Sign up</button>
             </div>
 
-            <div class="image">
+
+            <img src="https://via.placeholder.com/300">
+            <!-- <div class="image">
             image
-            </div>
+            </div> -->
 
         </div>
-    </div>
-
-    <div class="header-margin"></div>
 
 </div>
 
@@ -57,15 +48,19 @@
     <!-- Remember to flex-wrap this so if the window gets smaller, a new line is created -->
     <div class="infographic-container">
         <div class="infographic-item">
-            <img src="" alt="an image">
+            <img src="" alt="an image" class="infographic-image">
             <div>Caption text</div>
         </div>
         <div class="infographic-item">
-            <img src="" alt="an image">
+            <img src="" alt="an image" class="infographic-image">
             <div>Caption text</div>
         </div>
         <div class="infographic-item">
-            <img src="" alt="an image">
+            <img src="" alt="an image" class="infographic-image">
+            <div>Caption text</div>
+        </div>
+        <div class="infographic-item">
+            <img src="" alt="an image" class="infographic-image">
             <div>Caption text</div>
         </div>
         
@@ -78,11 +73,17 @@
     <div class="quote-author">- Nulla finibus ullamcorper ex</div>
 </div>
 
-<div class="call-to-action-panel">
+<div class="calltoaction-panel">
+    <div class="calltoaction-text">
+        <div class="calltoaction-header">Call to Action! It's time!</div>
+        <div class="calltoaction-body">Sign up for our product by clicking that button right there!</div>
+    </div>
+    <button type="button">Sign up</button>
 </div>
 
 <div class="footer">
-    Copyright (c) The Odin Project 2021
+    <div>Copyright (c) The Odin Project 2021</div>
+    <div>Icons made by <a href="https://www.flaticon.com/authors/icon-home" title="Icon home">Icon home</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 </div>
 
 
