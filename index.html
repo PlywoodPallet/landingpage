@@ -8,7 +8,7 @@
 <!-- flex-direction column -->
 <body>
 
-<!-- Each "panel" is a flex item made to be interchangable and modular -->
+<!-- Each "panel" div is made to be interchangable and modular -->
 
 <div class="header-panel">
         <div class="header-top">
@@ -21,7 +21,7 @@
             </ul> 
         </div>
 
-        <!-- Should I display this like the MDN example of image/caption? -->
+        <!-- Text underneath header logo and menu -->
         <div class="header-content">
             <div class="header-text">
                 <div class="hero-main-text">This Website is Awesome</div>
@@ -29,60 +29,58 @@
                 <div class="hero-secondary-text">Etiam aliquet, metus consequat tristique commodo, augue justo efficitur elit, sed cursus dui diam volutpat ipsum.
                 </div>
 
-                <button type="button">Sign up</button>
+                <button type="button" class="header-button">Sign up</button>
             </div>
 
-
             <img src="https://via.placeholder.com/300">
-            <!-- <div class="image">
-            image
-            </div> -->
 
         </div>
 
 </div>
 
+<!-- image with text under it. Overflow is wrapped on a new line  -->
 <div class="infographic-panel">
     <div class="infographic-title">Some random information</div>
 
-    <!-- Remember to flex-wrap this so if the window gets smaller, a new line is created -->
+    <!-- flex-wrap: wrap so more items get put on another line-->
     <div class="infographic-container">
-        <div class="infographic-item">
-            <img src="" alt="an image" class="infographic-image">
-            <div>Caption text</div>
+        <div>
+            <img src="./images/ambulance.png" alt="an image" class="infographic-image">
+            <div class="infographic-text">Duis est sapien, dapibus sit amet felis quis, iaculis condimentum leo. Cras tincidunt tempor diam eu elementum. </div>
         </div>
-        <div class="infographic-item">
-            <img src="" alt="an image" class="infographic-image">
-            <div>Caption text</div>
+        <div>
+            <img src="./images/microscope.png" alt="an image" class="infographic-image">
+            <div class="infographic-text">Duis est sapien, dapibus sit amet felis quis, iaculis condimentum leo. Cras tincidunt tempor diam eu elementum.</div>
         </div>
-        <div class="infographic-item">
-            <img src="" alt="an image" class="infographic-image">
-            <div>Caption text</div>
+        <div>
+            <img src="./images/pills-bottle.png" alt="an image" class="infographic-image">
+            <div class="infographic-text">Duis est sapien, dapibus sit amet felis quis, iaculis condimentum leo. Cras tincidunt tempor diam eu elementum.</div>
         </div>
-        <div class="infographic-item">
-            <img src="" alt="an image" class="infographic-image">
-            <div>Caption text</div>
+        <div>
+            <img src="./images/stethoscope-tool.png" alt="an image" class="infographic-image">
+            <div class="infographic-text">Duis est sapien, dapibus sit amet felis quis, iaculis condimentum leo. Cras tincidunt tempor diam eu elementum.</div>
         </div>
-        
     </div>
-
 </div>
 
+<!-- centered quote text -->
 <div class="quote-panel">
-    <div class="quote-text">Nulla finibus ullamcorper ex, quis tincidunt sapien eleifend ac. Aenean imperdiet ac mauris eu iaculis. Proin sit amet libero velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </div>
+    <div class="quote-text">Nulla finibus ullamcorper ex, quis tincidunt sapien eleifend ac. Aenean imperdiet ac mauris eu iaculis. Proin sit amet libero velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos conubia nostra, per inceptos himenaeos. </div>
     <div class="quote-author">- Nulla finibus ullamcorper ex</div>
 </div>
 
+<!-- text and a button -->
 <div class="calltoaction-panel">
-    <div class="calltoaction-text">
+    <div>
         <div class="calltoaction-header">Call to Action! It's time!</div>
+        <!-- class currently uneeded and undefined-->
         <div class="calltoaction-body">Sign up for our product by clicking that button right there!</div>
     </div>
-    <button type="button">Sign up</button>
+    <button type="button" class="calltoaction-button">Sign up</button>
 </div>
 
-<div class="footer">
-    <div>Copyright (c) The Odin Project 2021</div>
+<div class="footer-panel">
+    <div>Copyright Ⓒ The Odin Project 2021</div>
     <div>Icons made by <a href="https://www.flaticon.com/authors/icon-home" title="Icon home">Icon home</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 </div>
 

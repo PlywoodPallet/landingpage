@@ -1,70 +1,64 @@
 /* Experimenting with vh and vw for unit size but not consistently across all selectors. */
 
+/* Each "panel" div is made to be interchangable and modular */
 
+/* Import Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
-    display:flex;
-    flex-direction: column;
+    font-family:Roboto, serif; /* Use Roboto for all text */
+
     padding:0;
     margin:0;
 }
 
+/* link style */
 a {
     text-decoration: none;
     color: #E5E7EB;
 }
 
-
 .header-panel{
     background:#1F2937;
-    display:flex;
-    justify-content:center;
-    flex-direction:column;
-    padding: 0 15vw;
+    padding: 0 15vw; /* sets the left right padding for the header panel */
 }
 
 /* top row of header which includes logo and menu */
-/* a column flex item and row flex container*/
 .header-top{
     display:flex;
     justify-content: space-between;
     align-items:center;
-    padding: 5vh 0;
+
+    padding: 10px 0; /* padding needed here instead of margin because the top margin is the background color (white) */
 }
 
 .header-logo {
     color:#F9FAF8;
     font-size: 24px;
     font-weight:bold;
-
-}
-
-ul.menu{
-    list-style-type:none;
-    margin: 0px;
-    padding: 0px;
-}
-
-
-.menu li a {
-    font-size: 18px;
 }
 
 .menu {
     display:flex;
-    gap: 20px;
+
+    font-size: 18px;
+    list-style-type:none; /* remove underline under link */
+
+    gap: 20px; /* set the space between header link */
+
+    /* remove default margin and padding for ul itms in the menu div */
+    margin: 0px; 
+    padding: 0px;
 }
 
 .header-content {
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding: 10vh 0;
-    gap: 100px;
-}
 
-.header-text {
+    padding: 100px 0; /* padding needed here instead of margin because the bottom margin is the background color (white) */
 
+    gap: 100px; /* padding between header-text and header picture */
 }
 
 .hero-main-text {
@@ -77,51 +71,69 @@ ul.menu{
     color: #F9FAF8;
     font-size: 18px;
     flex-wrap:wrap;
+    padding-top:10px; /*padding within header-content */
+    padding-bottom:10px;
 }
 
+.header-button {
+    background: #3882f6;
+    color:#F9FAF8;
+    font-weight:bold;
 
-/* is there a more elegant way than flex-direction:column? Even though it is redudant (body flex-direction is already column), I like the way this organizes the site in modular sections*/
+    border-radius:10px;
+    padding: 10px 20px;
+    border:0;
+}
+
 .infographic-panel {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction:column;
-    padding: 5vh 15vw;
-    gap: 5vh;
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+
+    padding-left :15vw;
+    padding-right: 15vw;
+    
+    gap: 5vh; 
 }
 
 .infographic-title {
     color: #1F2937;
     font-size: 36px;
     font-weight:bolder;
+    text-align:center;
+
+    padding-bottom:5vh;
 }
 
 .infographic-container{
     display: flex;
     justify-content:space-around;
     flex-wrap:wrap;
-    gap: 20px;
-}
-
-.infographic.item {
-    padding: 0px 0px;
-
+    gap: 20px; /* gap between infographic items */
 }
 
 .infographic-image{
     width:150px;
     height:150px;
-    border: 2px solid #3882f6;
+    border: 3px solid #3882f6;
     border-radius: 25px;
 
+    box-sizing: border-box; /* Use the alternative box model so that padding subtracts from image size instead of adding onto the sides on top of image size */
+    padding: 20px;
+}
+
+.infographic-text {
+    width: 150px;
+    font-size: 16px;
+    line-height: 125%; /* increase the line spacing for this selector only */
+
+    margin-top:15px;
+
+    text-align:center;
 }
 
 .quote-panel {
-    display: flex;
-    flex-direction: column;
     background: #E5E7EB;
     padding: 10vh 20vw;
-    gap: 2vh;
 }
 
 .quote-text {
@@ -129,56 +141,55 @@ ul.menu{
     font-size:26px;
     font-style: italic;
     text-align: justify;
-    justify-content:center;
-    align-items:center;
 
 }
 
 .quote-author {
-    text-align:end;
-
-
+    text-align:end; /* set the author text to the right */
+    padding-top: 10px;
 }
 
 .calltoaction-panel {
-    background: #3882f6;
-    color: #F9FAF8;
-    padding: 50px 200px;
-    margin: 50px 200px;
     display:flex;
     flex-direction:row;
     justify-content:space-between;
     align-items:center;
-    border: 2px solid #F9FAF8;
+    
+    background: #3882f6;
+    color: #F9FAF8;
+    padding: 50px 100px;
+    margin: 50px 200px; /* margin "color" is the background set in body (white) */
+
     border-radius: 25px;
 }
 
-.calltoaction-text{
-    display:flex;
-    flex-direction: column;
-}
-
 .calltoaction-header {
-
+    font-weight:bolder;
 }
 
-.calltoaction-body{
 
+.calltoaction-button {
+    background: #3882f6; /* same background as calltoaction-panel color */
+    font-weight:bold;
+
+    border: 2px solid #F9FAF8;
+    border-radius:10px;
+
+    padding: 10px 20px;
+
+    color:#F9FAF8;
 }
 
-.footer a {
-    font-size: 12px;
-}
-
-.footer{
+.footer-panel{
     height: 72px;
+
+    /* flex container so that text is centered in header */
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
-    background:#1F2937;
+
+    background:#1F2937; /* same color as header background color */
     color:#F9FAF8;
     font-size:12px;
-    gap:5px;
 }
-
