@@ -1,2 +1,1 @@
-Landing Page Project for The Odin Project
-Used Flexbox 
+Landing Page Project using Flexbox
