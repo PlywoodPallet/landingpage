@@ -1,5 +1,5 @@
 # Landing Page
-Landing Page Project using Flexbox
+Hero-style website using Flexbox
 
 Preview: https://plywoodpallet.github.io/landingpage/
 
